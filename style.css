@@ -1,0 +1,225 @@
+/* IMPORTED FONTS  */
+@import url('https://fonts.googleapis.com/css2?family=Habibi&family=Irish+Grover&display=swap');
+
+/* CSS RESET*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*  ROOT VARIABLES*/
+:root {
+    --font-heading: 'Irish Grover', cursive;
+    --font-body: 'Habibi', serif;
+
+    --color-green: #06A816;
+    --color-orange: #E75D02;
+    --color-black: #000000;
+    --color-white: #ffffff;
+
+    --h1-size: 2.5em;
+    --h2-size: 1.75em;
+    --h3-size: 1.25em;
+    --text-size: 1.25em;
+}
+
+/* GLOBAL STYLES  */
+body {
+    font-family: var(--font-body);
+    color: var(--color-black);
+    background-color: var(--color-white);
+    line-height: 1.6;
+}
+
+header {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    text-align: center;
+    padding: 1em;
+}
+
+header h1 {
+    font-family: var(--font-heading);
+    font-size: var(--h1-size);
+    margin: 0; 
+    text-align: left; 
+}
+
+header p {
+        font-size: var(--text-size);
+        margin: 0.5em 0 0;
+        text-align: left;
+}
+header nav {
+        position: absolute; 
+        top: 1em; 
+        right: 1em;
+        }
+        
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1em; 
+    margin: 0;
+    padding: 0;
+}
+        
+header nav a {
+    text-decoration: none;
+    color: var(--color-white);
+    font-size: 0.8em;
+    background-color: var(--color-orange);
+    font-size: 0.9em; 
+    padding: 0.1em 3.5em;
+    border: 2px solid var(--color-white); 
+    border-radius: 4px; 
+    transition: background-color 0.3s ease;
+}
+        
+
+section {
+    padding: 2em;
+    text-align: center;
+}
+
+#fruits h2, #vegetables h2,
+#fruits h3, #vegetables h3,
+#fruits p, #vegetables p {
+    text-align: left; 
+    margin-bottom: 20px;
+}
+
+
+header h2 {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: var(--h2-size);
+    margin-bottom: 0.5em;
+    text-align: left;
+}
+
+header h3 {
+    background-color: var(--color-green);
+    color: var(--color-white);
+    font-family: var(--font-heading);
+    font-size: var(--h3-size);
+    margin: 1em 0;
+    text-align: left;
+}
+
+.fruit-gallery, .vegetable-gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); 
+    gap: 20px;
+    justify-content: center;
+}
+
+.item {
+    position: relative;
+    width: 250px;
+    height: 250px;
+    overflow: hidden;
+    border-radius: 0px;
+}
+
+.item img {
+    width: 150%;
+    height: 150%;
+    object-fit: cover;
+    border-radius: 0px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.name {
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    background: rgba(0, 0, 0, 0.6);
+    color: white; 
+    padding: 10px;
+    font-size: 16px; 
+    width: auto;
+    text-align: center; 
+}
+#backToTopBtn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border: 2px solid var(--color-white); 
+    padding: 10px;
+    border-radius: 3px;
+    font-size: 1.5em;
+    cursor: pointer;
+    transition: opacity 0.3s ease;
+}
+
+
+
+
+#contact {
+    background-color: var(--color-green); 
+    color: var(--color-white); 
+    padding: 1em; 
+}
+
+#contact h3 {
+    font-size: var(--text-size); 
+    margin-bottom: 1em; 
+}
+
+#contact address, #contact ul {
+    font-size: var(--text-size);
+    margin-bottom: 1em;
+    list-style-type: none;
+}
+footer {
+   color: var(--color-green);
+    text-align: center;
+    padding: 1em;
+    font-size: var(--text-size);
+}
+
+.fruit-gallery,
+.vegetable-gallery {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 20px;
+    justify-content: center;
+}
+
+/* MEDIA QUERY (Small) */
+@media (min-width: 428px) {
+    .fruit-gallery,
+    .vegetable-gallery {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+/* MEDIA QUERY (Medium) */
+@media (min-width: 768px) {
+    .fruit-gallery,
+    .vegetable-gallery {
+        grid-template-columns: repeat(2, 1fr); 
+    }
+}
+
+/* MEDIA QUERY (Large) */
+@media (min-width: 1024px) {
+    .fruit-gallery,
+    .vegetable-gallery {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
+
+/* MEDIA QUERY (Extra large) */
+@media (min-width: 1440px) {
+    .fruit-gallery,
+    .vegetable-gallery {
+        grid-template-columns: repeat(4, 1fr); 
+    }
+}
